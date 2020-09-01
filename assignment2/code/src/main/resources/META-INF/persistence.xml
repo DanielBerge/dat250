@@ -7,12 +7,12 @@
  <properties>
   <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
   <property name="javax.persistence.jdbc.url"
-    value="jdbc:derby:/Users/hib/dat250/persistence/testdb;create=true" />
-  <property name="javax.persistence.jdbc.user" value="test" />
-  <property name="javax.persistence.jdbc.password" value="test" />
+    value="jdbc:derby:/home/db/skole/250/dat250/assignment2/testdb;create=true" />
+  <property name="javax.persistence.jdbc.user" value="" />
+  <property name="javax.persistence.jdbc.password" value="" />
 
   <!-- EclipseLink should create the database schema automatically -->
-  <!--   <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+  <property name="eclipselink.ddl-generation" value="create-tables" />
   <property name="eclipselink.ddl-generation.output-mode" value="database" />
  </properties>
 
