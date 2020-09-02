@@ -1,12 +1,9 @@
 package no.hvl.dat250.jpa.creditcard.model;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Data
 public class CreditCard {
 
     private int number;
@@ -20,5 +17,21 @@ public class CreditCard {
 
     public void setId(int number) {
         this.number = number;
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 }
