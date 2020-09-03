@@ -9,10 +9,10 @@ import javax.persistence.Id;
 public class Bank {
 
     @GeneratedValue(strategy = GenerationType.TABLE)
+    @Id
     private String id;
     private String name;
 
-    @Id
     public String getId() {
         return id;
     }

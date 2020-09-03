@@ -8,13 +8,13 @@ import java.util.List;
 public class Address {
 
     @GeneratedValue(strategy = GenerationType.TABLE)
+    @Id
     private String id;
     private String street;
     private int number;
-    @ManyToMany(mappedBy = "address")
+    @ManyToMany()
     private final List<Person> personList = new ArrayList<>();
 
-    @Id
     public String getId() {
         return id;
     }

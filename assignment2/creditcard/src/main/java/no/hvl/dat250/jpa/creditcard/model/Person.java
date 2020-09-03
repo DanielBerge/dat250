@@ -7,13 +7,13 @@ import java.util.List;
 @Entity
 public class Person {
     @GeneratedValue(strategy = GenerationType.TABLE)
+    @Id
     private String id;
-    @OneToMany(mappedBy = "person")
+    @OneToMany()
     private final List<CreditCard> creditCards = new ArrayList<>();
-    @ManyToMany(mappedBy = "person")
+    @ManyToMany()
     private final List<Address> addresses = new ArrayList<>();
 
-    @Id
     public String getId() {
         return id;
     }
@@ -24,5 +24,9 @@ public class Person {
 
     public List<CreditCard> getCreditCards() {
         return creditCards;
+    }
+
+    public List<Address> getAddresses() {
+        return addresses;
     }
 }

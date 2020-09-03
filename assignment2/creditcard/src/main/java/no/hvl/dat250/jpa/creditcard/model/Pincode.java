@@ -1,19 +1,16 @@
 package no.hvl.dat250.jpa.creditcard.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Pincode {
 
     @GeneratedValue(strategy = GenerationType.TABLE)
+    @Id
     private String id;
     private String pincode;
     private int count;
 
-    @Id
     public String getId() {
         return id;
     }
@@ -36,5 +33,16 @@ public class Pincode {
 
     public void setPincode(String pincode) {
         this.pincode = pincode;
+    }
+
+    @OneToOne(optional = false)
+    private CreditCard creditCard;
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
     }
 }

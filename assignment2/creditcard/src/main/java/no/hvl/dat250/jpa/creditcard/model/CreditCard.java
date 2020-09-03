@@ -8,18 +8,17 @@ import javax.persistence.OneToOne;
 @Entity
 public class CreditCard {
 
+    @Id
     private int number;
     private int limit;
     private int balance;
 
-    @OneToOne(mappedBy = "creditcard")
+    @OneToOne()
     private Pincode pincode;
 
     @ManyToOne()
     private Bank bank;
 
-
-    @Id
     public int getId() {
         return number;
     }
@@ -48,7 +47,15 @@ public class CreditCard {
         return pincode;
     }
 
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
+    }
+
     public Bank getBank() {
         return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
     }
 }
