@@ -1,9 +1,8 @@
 package no.hvl.dat250.jpa.creditcard.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Address {
@@ -12,6 +11,8 @@ public class Address {
     private String id;
     private String street;
     private int number;
+    @ManyToMany(mappedBy = "address")
+    private final List<Person> personList = new ArrayList<>();
 
     @Id
     public String getId() {
@@ -20,5 +21,21 @@ public class Address {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

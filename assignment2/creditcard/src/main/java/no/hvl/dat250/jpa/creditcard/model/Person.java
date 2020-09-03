@@ -8,8 +8,10 @@ import java.util.List;
 public class Person {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private String id;
-    @OneToMany(mappedBy = "creditcard")
+    @OneToMany(mappedBy = "person")
     private final List<CreditCard> creditCards = new ArrayList<>();
+    @ManyToMany(mappedBy = "person")
+    private final List<Address> addresses = new ArrayList<>();
 
     @Id
     public String getId() {
@@ -18,5 +20,9 @@ public class Person {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public List<CreditCard> getCreditCards() {
+        return creditCards;
     }
 }

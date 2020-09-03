@@ -5,3 +5,6 @@ There were no problems when installing JPA
 I inspected the database using IntelliJs database explorer:
 ![Database Explorer](database.png)
 
+
+Issues:
+I could not get lombok to work.
