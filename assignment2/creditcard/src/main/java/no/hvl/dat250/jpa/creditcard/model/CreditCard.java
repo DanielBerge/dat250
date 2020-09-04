@@ -21,4 +21,7 @@ public class CreditCard {
 
     @ManyToOne()
     private Bank bank;
+
+    @ManyToOne(optional = false)
+    private Person people;
 }

@@ -17,21 +17,12 @@ public class Main {
         em.getTransaction().begin();
 
         Person person = new Person();
-        CreditCard creditCard = new CreditCard();
-        Pincode pincode = new Pincode();
-        pincode.setCount(1);
-        pincode.setPincode("4332");
-        Address address = new Address();
-        address.setNumber(30);
-        address.setStreet("Dataveien");
-        Bank bank = new Bank();
-        bank.setName("DNB");
+        Address address = createAddress(person);
+        person.getAddresses().add(address);
+        Pincode pincode = createPincode();
+        Bank bank = createBank();
+        CreditCard creditCard = createCreditcard(bank, pincode, person);
 
-        creditCard.setId(123123131);
-        creditCard.setBank(bank);
-        creditCard.setBalance(1000);
-        creditCard.setLimit(2000);
-        creditCard.setPincode(pincode);
         person.getCreditCards().add(creditCard);
 
         em.persist(person);
@@ -42,5 +33,37 @@ public class Main {
 
         em.getTransaction().commit();
         em.close();
+    }
+
+    public static CreditCard createCreditcard(Bank bank, Pincode pincode, Person person) {
+        CreditCard creditCard = new CreditCard();
+        creditCard.setNumber(123123131);
+        creditCard.setBank(bank);
+        creditCard.setBalance(1000);
+        creditCard.setLimit(2000);
+        creditCard.setPincode(pincode);
+        creditCard.setPeople(person);
+        return creditCard;
+    }
+
+    public static Address createAddress(Person person) {
+        Address address = new Address();
+        address.setNumber(30);
+        address.setStreet("Dataveien");
+        address.getPersonList().add(person);
+        return address;
+    }
+
+    public static Pincode createPincode() {
+        Pincode pincode = new Pincode();
+        pincode.setCount(1);
+        pincode.setPincode("4332");
+        return pincode;
+    }
+
+    public static Bank createBank() {
+        Bank bank = new Bank();
+        bank.setName("DNB");
+        return bank;
     }
 }

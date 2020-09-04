@@ -12,8 +12,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.TABLE)
     @Id
     private String id;
-    @OneToMany()
+
+    @OneToMany(mappedBy = "people")
     private final List<CreditCard> creditCards = new ArrayList<>();
-    @ManyToMany()
+
+    @ManyToMany(mappedBy = "personList")
     private final List<Address> addresses = new ArrayList<>();
 }

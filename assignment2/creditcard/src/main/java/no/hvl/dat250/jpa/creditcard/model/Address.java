@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -15,6 +16,7 @@ public class Address {
     private String id;
     private String street;
     private int number;
+
     @ManyToMany()
     private final List<Person> personList = new ArrayList<>();
 }
