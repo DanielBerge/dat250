@@ -3,8 +3,8 @@
 There were no problems when installing JPA
 
 Code:
-![Experiment 1](jpabasic)
-![Experiment 2](creditcard)
+[Experiment 1](jpabasic/src/main/java/no/hvl/dat250/jpa)
+[Experiment 2](creditcard/src/main/java/no/hvl/dat250/jpa/creditcard)
 
 I inspected the database using IntelliJs database explorer:
 ![Database Explorer](assets/database.png)
