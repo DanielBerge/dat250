@@ -10,7 +10,7 @@
  <properties>
   <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
   <property name="javax.persistence.jdbc.url"
-    value="jdbc:derby:/home/db/skole/250/dat250/assignment2/relationsshipDb;create=true" />
+    value="jdbc:derby:./relationsshipDb;create=true" />
   <property name="javax.persistence.jdbc.user" value="" />
   <property name="javax.persistence.jdbc.password" value="" />
 
