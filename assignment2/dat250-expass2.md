@@ -7,8 +7,8 @@ Code:
 ![Experiment 2](creditcard)
 
 I inspected the database using IntelliJs database explorer:
-![Database Explorer](database.png)
-![Database Explorer](database2.png)
+![Database Explorer](assets/database.png)
+![Database Explorer](assets/database2.png)
 
 Tables that were created:
 * ADDRESS
