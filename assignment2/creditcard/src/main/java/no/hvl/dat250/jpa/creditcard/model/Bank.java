@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Data
 public class Bank {
 
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private String id;
     private String name;

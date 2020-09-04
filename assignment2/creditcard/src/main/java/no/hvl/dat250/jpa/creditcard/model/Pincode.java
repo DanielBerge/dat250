@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 public class Pincode {
 
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private String id;
     private String pincode;

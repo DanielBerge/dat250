@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class Address {
 
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private String id;
     private String street;

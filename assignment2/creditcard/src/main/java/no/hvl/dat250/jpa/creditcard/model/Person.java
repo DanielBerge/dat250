@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Data
 public class Person {
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private String id;
 
