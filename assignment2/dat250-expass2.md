@@ -2,9 +2,10 @@
 
 There were no problems when installing JPA
 
-Code:
-[Experiment 1](jpabasic/src/main/java/no/hvl/dat250/jpa)
-[Experiment 2](creditcard/src/main/java/no/hvl/dat250/jpa/creditcard)
+### Code:
+
+* [Experiment 1](jpabasic/src/main/java/no/hvl/dat250/jpa)
+* [Experiment 2](creditcard/src/main/java/no/hvl/dat250/jpa/creditcard)
 
 I inspected the database using IntelliJs database explorer:
 ![Database Explorer](assets/database.png)
@@ -19,5 +20,6 @@ Tables that were created:
 * PINCODE
 
 
-Issues:
+### Issues:
+
 I could not get lombok to work for a while, but later realized i had to install a lombok plugin to get it to work in the IDE.
