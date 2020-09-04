@@ -1,21 +1,16 @@
 package no.hvl.dat250.jpa.creditcard;
 
 import no.hvl.dat250.jpa.creditcard.model.*;
-import org.junit.Before;
-import org.junit.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class CCTest {
-
+public class Main {
     private static final String PERSISTENCE_UNIT_NAME = "creditcard";
-    private EntityManagerFactory factory;
 
-    @Test
-    public void testCreateTables() {
-        factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+    public static void main(String[] args) {
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         EntityManager em = factory.createEntityManager();
         em.clear();
 

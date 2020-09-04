@@ -38,4 +38,8 @@ public class Address {
     public void setNumber(int number) {
         this.number = number;
     }
+
+    public List<Person> getPersonList() {
+        return personList;
+    }
 }
