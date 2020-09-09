@@ -24,3 +24,49 @@ Using SHA256
 ![Bulk write](assets/bulkwrite.png)
 
 ## Experiment 2
+
+### Tutorial example
+
+![Mapreduce1](assets/mapreduce.png)
+
+![Mapreduce2](assets/mapreduce2.png)
+
+### My own
+
+My own function counts the number of items ordered in total, per customer.
+
+#### Mapfunction
+```
+var mapFunction3 = function() {
+   var value = this.items.length;
+   emit(this.cust_id, value);
+};
+```
+
+#### Reducefunction
+
+```
+var reduceFunction3 = function(keyCustId, countItems) {
+  return Array.sum(countItems);
+};
+```
+
+#### Mapreduce
+
+```
+db.orders.mapReduce(
+   mapFunction3,
+   reduceFunction3,
+   { out: "map_reduce_own" }
+)
+```
+
+#### Query
+
+```
+db.map_reduce_own.find().sort( { _id: 1 } )
+```
+
+##### Result
+
+![Result](assets/own_function.png)
