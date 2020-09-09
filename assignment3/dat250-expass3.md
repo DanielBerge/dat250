@@ -17,10 +17,10 @@ Using SHA256
 ### Update 
 ![Update](assets/update.png)
 
-### Remove 
-![Remove](assets/remove.png)
+### Delete 
+![Delete](assets/delete.png)
 
 ### Bulk write
 ![Bulk write](assets/bulkwrite.png)
 
-## Experiemtn 2
+## Experiment 2
