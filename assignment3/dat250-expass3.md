@@ -38,8 +38,8 @@ My own function counts the number of items ordered in total, per customer. This 
 #### Mapfunction
 ```
 var mapFunction3 = function() {
-   var value = this.items.length;
-   emit(this.cust_id, value);
+   var total_items = this.items.length;
+   emit(this.cust_id, total_items);
 };
 ```
 
