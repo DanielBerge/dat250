@@ -33,7 +33,7 @@ Using SHA256
 
 ### My own
 
-My own function counts the number of items ordered in total, per customer.
+My own function counts the number of items ordered in total, per customer. This is useful because it is now possible to see how many items the customer have bought.
 
 #### Mapfunction
 ```
