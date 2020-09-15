@@ -1,4 +1,4 @@
-package no.hvl.dat250.rest.counters;
+package no.hvl.dat250.rest.todos;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

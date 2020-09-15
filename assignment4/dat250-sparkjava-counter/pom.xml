@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>no.hvl.dat250.rest</groupId>
-	<artifactId>counters</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>todos</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>counters</name>
@@ -95,7 +95,7 @@
 					<archive>
 						<manifest>
 							<!-- This must be a fully qualified name. e.g. no.hvl.dat159.Main -->
-							<mainClass>no.hvl.dat250.rest.counters.App</mainClass>
+							<mainClass>no.hvl.dat250.rest.todos.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

@@ -1,4 +1,4 @@
-package no.hvl.dat250.rest.counters;
+package no.hvl.dat250.rest.todos;
 
 import com.google.gson.Gson;
 
@@ -33,7 +33,6 @@ public class Counters {
     }
 
     String toJson() {
-
         Gson gson = new Gson();
 
         String jsonInString = gson.toJson(this);
