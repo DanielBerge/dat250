@@ -3,41 +3,41 @@ package no.hvl.dat250.rest.counters;
 import com.google.gson.Gson;
 
 public class Counters {
-	
-	private int red,green;
 
-	public Counters () {
-		this.red = 0;
-		this.green = 0;
-	}
+    private int red, green;
 
-	public Counters (int red, int green) {
-		this.red = red;
-		this.green = green;
-	}
-	
-	public int getRed() {
-		return red;
-	}
+    public Counters() {
+        this.red = 0;
+        this.green = 0;
+    }
 
-	public void setRed(int red) {
-		this.red = red;
-	}
+    public Counters(int red, int green) {
+        this.red = red;
+        this.green = green;
+    }
 
-	public int getGreen() {
-		return green;
-	}
+    public int getRed() {
+        return red;
+    }
 
-	public void setGreen(int green) {
-		this.green = green;
-	}
-	
-	String toJson () {
-    	
-    	Gson gson = new Gson();
-    	    
-    	String jsonInString = gson.toJson(this);
-    	
-    	return jsonInString;
+    public void setRed(int red) {
+        this.red = red;
+    }
+
+    public int getGreen() {
+        return green;
+    }
+
+    public void setGreen(int green) {
+        this.green = green;
+    }
+
+    String toJson() {
+
+        Gson gson = new Gson();
+
+        String jsonInString = gson.toJson(this);
+
+        return jsonInString;
     }
 }

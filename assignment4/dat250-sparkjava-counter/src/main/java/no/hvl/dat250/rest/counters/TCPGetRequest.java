@@ -9,58 +9,58 @@ import java.util.Scanner;
 
 public class TCPGetRequest {
 
-	private static int port = 8080;
-	private static String host = "localhost";
-	private static String uri = "/counters";
+    private static final int port = 8080;
+    private static final String host = "localhost";
+    private static final String uri = "/counters";
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		try (Socket s = new Socket(host, port)) {
+        try (Socket s = new Socket(host, port)) {
 
-			// construct the GET request
-			String httpgetrequest = "GET " + uri + " HTTP/1.1\r\n" + "Accept: application/json\r\n"
-					+ "Host: localhost\r\n" + "Connection: close\r\n" + "\r\n";
+            // construct the GET request
+            String httpgetrequest = "GET " + uri + " HTTP/1.1\r\n" + "Accept: application/json\r\n"
+                    + "Host: localhost\r\n" + "Connection: close\r\n" + "\r\n";
 
-			// sent the HTTP request
-			OutputStream output = s.getOutputStream();
+            // sent the HTTP request
+            OutputStream output = s.getOutputStream();
 
-			PrintWriter pw = new PrintWriter(output, false);
+            PrintWriter pw = new PrintWriter(output, false);
 
-			pw.print(httpgetrequest);
-			pw.flush();
+            pw.print(httpgetrequest);
+            pw.flush();
 
-			// read the HTTP response
-			InputStream in = s.getInputStream();
+            // read the HTTP response
+            InputStream in = s.getInputStream();
 
-			Scanner scan = new Scanner(in);
-			StringBuilder jsonresponse = new StringBuilder();
-			boolean header = true;
+            Scanner scan = new Scanner(in);
+            StringBuilder jsonresponse = new StringBuilder();
+            boolean header = true;
 
-			while (scan.hasNext()) {
+            while (scan.hasNext()) {
 
-				String nextline = scan.nextLine();
+                String nextline = scan.nextLine();
 
-				if (header) {
-					System.out.println(nextline);
-				} else {
-					jsonresponse.append(nextline);
-				}
+                if (header) {
+                    System.out.println(nextline);
+                } else {
+                    jsonresponse.append(nextline);
+                }
 
-				// simplified approach to identifying start of body: the empty line
-				if (nextline.isEmpty()) {
-					header = false;
-				}
+                // simplified approach to identifying start of body: the empty line
+                if (nextline.isEmpty()) {
+                    header = false;
+                }
 
-			}
+            }
 
-			System.out.println("BODY:");
-			System.out.println(jsonresponse.toString());
+            System.out.println("BODY:");
+            System.out.println(jsonresponse.toString());
 
-			scan.close();
+            scan.close();
 
-		} catch (IOException ex) {
-			System.err.println(ex);
-		}
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
 
-	}
+    }
 }
