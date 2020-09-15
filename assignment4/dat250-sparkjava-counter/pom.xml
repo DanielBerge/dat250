@@ -80,7 +80,7 @@
 					<archive>
 						<manifest>
 							<!-- This must be a fully qualified name. e.g. no.hvl.dat159.Main -->
-							<mainClass>no.hvl.dat110.rest.counters.App</mainClass>
+							<mainClass>no.hvl.dat250.rest.counters.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

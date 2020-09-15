@@ -1,4 +1,4 @@
-package no.hvl.dat110.rest.counters;
+package no.hvl.dat250.rest.counters;
 
 import static spark.Spark.after;
 import static spark.Spark.get;
